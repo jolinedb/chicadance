@@ -28,11 +28,5 @@ export const IMG = {
 
 export const INSTAGRAM_URL = "https://www.instagram.com/adina.joline/?hl=en";
 
-export const INSTA_GRID = [
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/rkgbql4d_image.png",
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/63fy7g6b_image.png",
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/pv74jmdv_image.png",
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/p2l0la72_image.png",
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/9l9jjxlh_image.png",
-  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/bpy2jjyu_photo_2026-08-14_09-29-25.jpg",
-];
+export const INTRO_VIDEO_URL =
+  "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/5xchlqr2_HOW%20TO%20TRAIN%20LIKE%20A%20K-POP%20TRAINEE%20FROM%20HOME%21.mp4";

@@ -17,7 +17,7 @@ export const Hero = () => {
   const bgScale = useTransform(scrollYProgress, [0, 1], [1.08, reduced ? 1.08 : 1.22]);
 
   return (
-    <section ref={ref} id="top" className="relative min-h-screen flex items-end overflow-hidden">
+    <section ref={ref} id="top" className="relative h-screen min-h-[620px] flex items-end overflow-hidden">
       <motion.div className="absolute inset-0" style={{ y: bgY, scale: bgScale }}>
         <img
           src={IMG.heroDancers}
@@ -58,7 +58,7 @@ export const Hero = () => {
         ))}
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-16 sm:pb-24 pt-40 w-full">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 pb-8 sm:pb-10 pt-24 w-full">
         <motion.div
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -69,7 +69,7 @@ export const Hero = () => {
           YOUR TRAINEE ERA STARTS HERE
         </motion.div>
 
-        <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl xl:text-8xl leading-[0.95] uppercase max-w-5xl" data-testid="hero-headline">
+        <h1 className="font-display text-3xl sm:text-5xl lg:text-6xl xl:text-7xl leading-[0.95] uppercase max-w-5xl" data-testid="hero-headline">
           <span className="block overflow-hidden pb-1">
             <motion.span className="block display-skew" {...lineAnim(reduced, 0)}>
               Stop Guessing.
@@ -91,7 +91,7 @@ export const Hero = () => {
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.9 }}
-          className="text-base md:text-lg text-white/85 max-w-2xl mt-6 font-medium"
+          className="text-sm md:text-base text-white/85 max-w-2xl mt-4 font-medium"
           data-testid="hero-subheadline"
         >
           Structured K-pop dance training, technique drills, and real feedback from a former
@@ -102,14 +102,14 @@ export const Hero = () => {
           initial={reduced ? {} : { opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 1.05 }}
-          className="flex flex-col sm:flex-row gap-4 mt-8"
+          className="flex flex-col sm:flex-row gap-3 mt-5"
         >
           <a
             href={SKOOL_URL}
             target="_blank"
             rel="noopener noreferrer"
             data-testid="hero-primary-cta"
-            className="btn-primary font-display text-base sm:text-lg px-8 py-4 rounded-full hard-shadow-electric inline-flex items-center justify-center gap-2"
+            className="btn-primary font-display text-base sm:text-lg px-8 py-3.5 rounded-full hard-shadow-electric inline-flex items-center justify-center gap-2"
           >
             Join the Trainee Track · $20/mo
             <ArrowRight className="w-5 h-5" />
@@ -119,7 +119,7 @@ export const Hero = () => {
             target="_blank"
             rel="noopener noreferrer"
             data-testid="hero-secondary-cta"
-            className="btn-ghost font-bold text-base px-8 py-4 rounded-full border-2 border-white/30 text-white inline-flex items-center justify-center"
+            className="btn-ghost font-bold text-base px-8 py-3.5 rounded-full border-2 border-white/30 text-white inline-flex items-center justify-center"
           >
             Explore the Community · $5/mo
           </a>
@@ -129,7 +129,7 @@ export const Hero = () => {
           initial={reduced ? {} : { opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1.3 }}
-          className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-10 text-sm text-white/70 font-semibold"
+          className="flex flex-wrap items-center gap-x-8 gap-y-2 mt-6 text-sm text-white/70 font-semibold"
           data-testid="hero-trust-strip"
         >
           <span className="flex items-center gap-2">
@@ -146,3 +146,4 @@ export const Hero = () => {
     </section>
   );
 };
+

@@ -1,6 +1,6 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
-import { SKOOL_URL, IMG } from "@/lib/constants";
+import { SKOOL_URL, IMG, INTRO_VIDEO_URL } from "@/lib/constants";
 
 export const Community = () => (
   <section className="relative py-24 sm:py-32 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] overflow-hidden">
@@ -32,6 +32,24 @@ export const Community = () => (
               Meet the CHICADANCE Community
               <ArrowRight className="w-5 h-5" />
             </a>
+            <div className="mt-8" data-testid="community-intro-video-block">
+              <p className="flex items-center gap-2 text-xs tracking-[0.25em] font-bold uppercase text-[#9CDAFF] mb-3">
+                <Play className="w-4 h-4" fill="#9CDAFF" />
+                Video intro to the course &amp; community
+              </p>
+              <div className="rounded-2xl overflow-hidden border-2 border-[#38B6FF] hard-shadow-electric -rotate-1 bg-black">
+                <video
+                  data-testid="community-intro-video"
+                  src={INTRO_VIDEO_URL}
+                  controls
+                  playsInline
+                  preload="metadata"
+                  className="w-full aspect-video"
+                >
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </div>
           </Reveal>
         </div>
 

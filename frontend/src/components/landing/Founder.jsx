@@ -9,10 +9,10 @@ const RIBBON = [
 ];
 
 export const Founder = () => (
-  <section id="adina" className="relative py-24 sm:py-32 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] scroll-mt-20">
+  <section id="adina" className="relative py-14 sm:py-16 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] scroll-mt-20">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-      <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-        <Reveal className="relative order-2 lg:order-1">
+      <div className="grid lg:grid-cols-2 gap-8 lg:gap-14 items-center">
+        <Reveal className="relative order-2 lg:order-1 max-w-sm mx-auto lg:mx-0 w-full">
           <div className="absolute -inset-3 bg-gradient-to-br from-[#415AB6] via-[#AD4BAD] to-[#D395FF] rounded-[2rem] -rotate-2" />
           <div
             data-testid="founder-portrait-slot"
@@ -48,11 +48,11 @@ export const Founder = () => (
               drills, the details, the repetition, and the honest feedback that makes progress
               real.
             </p>
-            <p className="text-base md:text-lg text-white/80 mt-4 leading-relaxed">
+            <p className="text-sm md:text-base text-white/80 mt-3 leading-relaxed">
               CHICADANCE exists to bring that level of intention to dancers everywhere. You do not
               have to live in Korea to start taking your training seriously.
             </p>
-            <div className="mt-8" data-testid="founder-signature">
+            <div className="mt-5" data-testid="founder-signature">
               <p className="font-display text-xl text-white display-skew">Adina De Bezenac</p>
               <p className="text-sm text-[#9CDAFF] font-semibold mt-1">
                 Founder, CHICADANCE · Former K-pop Trainee
@@ -62,7 +62,7 @@ export const Founder = () => (
         </div>
       </div>
 
-      <Reveal delay={0.1} className="mt-16">
+      <Reveal delay={0.1} className="mt-10">
         <div className="flex flex-wrap gap-3 justify-center" data-testid="credibility-ribbon">
           {RIBBON.map((claim, i) => (
             <span
@@ -76,7 +76,7 @@ export const Founder = () => (
             </span>
           ))}
         </div>
-        <p className="text-xs text-white/40 text-center mt-5 max-w-xl mx-auto">
+        <p className="text-xs text-white/40 text-center mt-3 max-w-xl mx-auto">
           Names are shared to describe Adina&rsquo;s training background. They do not imply
           endorsement or affiliation with CHICADANCE.
         </p>
