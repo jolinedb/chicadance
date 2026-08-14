@@ -73,6 +73,17 @@ export const Audition = () => (
               className="w-full h-auto"
               data-testid="global-community-map"
             />
+            <div
+              data-testid="global-community-count-overlay"
+              className="absolute bottom-3 left-3 sm:bottom-6 sm:left-6 bg-[#06060F]/85 backdrop-blur-sm border-2 border-[#D395FF] rounded-xl px-4 py-2.5 sm:px-5 sm:py-3 -rotate-2 hard-shadow-electric text-left"
+            >
+              <p className="font-display text-lg sm:text-2xl display-skew text-white leading-none">
+                <span className="text-[#38B6FF]">1,500+</span> DANCERS
+              </p>
+              <p className="text-[10px] sm:text-xs tracking-[0.25em] font-bold uppercase text-[#D395FF] mt-1">
+                Across 40+ countries
+              </p>
+            </div>
           </div>
         )}
       </Reveal>

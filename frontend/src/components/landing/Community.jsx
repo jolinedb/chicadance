@@ -41,6 +41,7 @@ export const Community = () => (
                 <video
                   data-testid="community-intro-video"
                   src={INTRO_VIDEO_URL}
+                  poster="/intro-video-poster.jpg"
                   controls
                   playsInline
                   preload="metadata"
