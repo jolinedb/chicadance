@@ -37,10 +37,10 @@ export const Community = () => (
 
         <Reveal delay={0.15} className="relative h-[420px] sm:h-[500px]" data-testid="community-collage">
           <div className="absolute top-0 left-0 w-[70%] rotate-[-4deg] rounded-2xl overflow-hidden border-2 border-[#D395FF] hard-shadow-electric">
-            <img src={IMG.chicaDance} alt="CHICADANCE online K-pop dance studio brand visual" className="w-full h-full object-cover" />
+            <img src={IMG.studioFloor} alt="CHICADANCE dancer training in a Seoul practice studio" className="w-full h-full object-cover" />
           </div>
           <div className="absolute bottom-0 right-0 w-[70%] rotate-[3deg] rounded-2xl overflow-hidden border-2 border-[#38B6FF] hard-shadow-berry">
-            <img src={IMG.kpopDancing} alt="K-pop dancing with the CHICADANCE online course" className="w-full h-full object-cover" />
+            <img src={IMG.greenScreen} alt="CHICADANCE dancer filming choreography content" className="w-full h-full object-cover" />
           </div>
           <div className="absolute top-[42%] left-[38%] bg-[#D395FF] text-[#06060F] px-4 py-2 rounded-xl border-2 border-[#06060F] rotate-[-6deg] hard-shadow-sky">
             <span className="font-display text-xs sm:text-sm display-skew">INSIDE SKOOL</span>

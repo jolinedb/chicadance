@@ -3,10 +3,10 @@ import { Reveal, SectionLabel } from "./Reveal";
 import { IMG } from "@/lib/constants";
 
 const SEQUENCE = [
-  { icon: Flame, label: "Warm-up", img: IMG.studioFloor, pos: "object-[center_60%]" },
-  { icon: Dumbbell, label: "Technical drill", img: IMG.heroDancers, pos: "object-center" },
-  { icon: Music, label: "Choreography practice", img: IMG.greenScreen, pos: "object-center" },
-  { icon: Star, label: "Performance energy", img: IMG.stageSet, pos: "object-[center_30%]" },
+  { icon: Flame, label: "Warm-up", img: IMG.stepWarmup, pos: "object-center" },
+  { icon: Dumbbell, label: "Technical drill", img: IMG.stepDrill, pos: "object-center" },
+  { icon: Music, label: "Choreography practice", img: IMG.stepChoreo, pos: "object-center" },
+  { icon: Star, label: "Performance energy", img: IMG.stepPerformance, pos: "object-top" },
 ];
 
 export const Audition = () => (

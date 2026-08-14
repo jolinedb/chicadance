@@ -15,4 +15,14 @@ export const IMG = {
     "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/p2l0la72_image.png",
   stageSet:
     "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/9l9jjxlh_image.png",
+  stepWarmup:
+    "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/362cea6d40b24a371e3e5408f08a4e741adb45afe3f3eea1fe2952b517315d4b.jpeg",
+  stepDrill:
+    "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/2331a98f56f84f09c7d5eeeca396b0d88f22e27655bf3017a15f5e29b5e56ab9.jpeg",
+  stepChoreo:
+    "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/eb8040399c83f37532ed4102aba11ca7ee10b731a619ead5edb7551930263ae3.jpeg",
+  stepPerformance:
+    "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/32b75c43dcaa6cf93a96a2ef4e9aeaafc29a2c43ed3955fc1d8a875706ea6e9c.jpeg",
 };
+
+export const INSTAGRAM_URL = "https://www.instagram.com/adina.joline/?hl=en";

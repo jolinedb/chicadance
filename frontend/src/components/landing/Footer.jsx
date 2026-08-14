@@ -1,5 +1,5 @@
-import { Sparkle, Mail, ExternalLink } from "lucide-react";
-import { SKOOL_URL } from "@/lib/constants";
+import { Sparkle, Mail, ExternalLink, Instagram } from "lucide-react";
+import { SKOOL_URL, INSTAGRAM_URL } from "@/lib/constants";
 
 export const Footer = () => (
   <footer className="border-t border-white/10 py-14 bg-[#06060F]">
@@ -26,6 +26,15 @@ export const Footer = () => (
             className="flex items-center gap-2 text-white/70 hover:text-[#D395FF] transition-colors duration-200 font-semibold"
           >
             <ExternalLink className="w-4 h-4" /> CHICADANCE Skool Community
+          </a>
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="footer-instagram-link"
+            className="flex items-center gap-2 text-white/70 hover:text-[#D395FF] transition-colors duration-200 font-semibold"
+          >
+            <Instagram className="w-4 h-4" /> @adina.joline
           </a>
           <a
             href="mailto:adinadebez@gmail.com"
