@@ -1,0 +1,137 @@
+:root {
+  --ink: #06060f;
+  --ink-2: #0c0c1c;
+  --royal: #415ab6;
+  --lavender: #d395ff;
+  --sky: #9cdaff;
+  --electric: #38b6ff;
+  --berry: #ad4bad;
+}
+
+html {
+  scroll-behavior: auto;
+  overflow-x: clip;
+}
+
+body {
+  background: var(--ink);
+  color: #ffffff;
+  font-family: "Outfit", sans-serif;
+  overflow-x: clip;
+}
+
+.font-display {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+
+.display-skew {
+  transform: skewX(-6deg);
+}
+
+::selection {
+  background: var(--lavender);
+  color: var(--ink);
+}
+
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hard-shadow-lav {
+  box-shadow: 6px 6px 0 var(--lavender);
+}
+.hard-shadow-electric {
+  box-shadow: 6px 6px 0 var(--electric);
+}
+.hard-shadow-berry {
+  box-shadow: 6px 6px 0 var(--berry);
+}
+.hard-shadow-sky {
+  box-shadow: 6px 6px 0 var(--sky);
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+.marquee-track.marquee-fast {
+  animation-duration: 28s;
+}
+
+@keyframes beat-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+.beat-dot {
+  animation: beat-pulse 0.9s ease-in-out infinite;
+}
+
+.btn-primary {
+  background: var(--lavender);
+  color: var(--ink);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+.btn-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0 var(--electric);
+}
+.btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--electric);
+}
+
+.btn-ghost {
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.btn-ghost:hover {
+  background: rgba(211, 149, 255, 0.12);
+  border-color: var(--lavender);
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--electric);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.35);
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+  .beat-dot {
+    animation: none;
+    opacity: 1;
+  }
+}

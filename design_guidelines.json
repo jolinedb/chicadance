@@ -1,0 +1,99 @@
+{
+  "theme": "dark",
+  "typography": {
+    "heading": "Fredoka, Bricolage Grotesque, or Cabinet Grotesk (Bubbly but bold and high-energy display font)",
+    "body": "Outfit or Satoshi (Clean, readable sans-serif)",
+    "notes": "Must NOT be a generic AI font pairing. No Inter for headings. Use heavy weights (Black/ExtraBold) for headlines with tight tracking (tracking-tighter) for massive text. Keep 'CHICA DANCE' text condensed and uppercase like the brand requirement."
+  },
+  "colors": {
+    "primary": "#38B6FF",
+    "secondary": "#D395FF",
+    "accent": "#AD4BAD",
+    "background": "#050510",
+    "surface": "#12121A",
+    "palette": {
+      "royal_blue": "#415AB6",
+      "lavender": "#D395FF",
+      "sky_blue": "#9CDAFF",
+      "electric_blue": "#38B6FF",
+      "berry_magenta": "#AD4BAD",
+      "deep_ink": "#050510",
+      "white": "#FFFFFF"
+    }
+  },
+  "visual_enhancers": {
+    "textures": "Subtle noise overlay (grain) on dark backgrounds to give a 'studio rehearsal notebook' mixed with 'neon stage light' feel.",
+    "borders": "Neon-pastel brutalism: Use hard borders (border-lavender or border-electric_blue) on dark cards instead of soft typical shadows.",
+    "shadows": "Use hard offset shadows (e.g., box-shadow: 4px 4px 0px var(--color-electric-blue)) on cards and buttons to simulate a sticker/notebook aesthetic.",
+    "shapes": "Sticker-like labels, offset collage frames, tilted micro-elements (rotate-[-3deg], rotate-[4deg]). Avoid rigid, all-straight-line layouts."
+  },
+  "layouts": {
+    "hero": "Full-bleed kinetic hero feeling like a dance trailer, NOT a SaaS page. Headline: 'Stop Guessing. Start Training Like a K-pop Trainee.' Eyebrow: 'YOUR TRAINEE ERA STARTS HERE'. Include floating sticker labels ('TECHNIQUE. MUSICALITY. PERFORMANCE.') and animated 5-6-7-8 count markers staggering in. Add a 'Trainee Mode' collectible-pass badge.",
+    "grid_system": "Use The 'Tetris' Bento Grid (Mode A) for sections. Wide gaps (gap-8 to gap-12), asymmetrical column spans. Leave intentional negative space.",
+    "sections": [
+      "Sticky Header: Nav (The Track, Meet Adina, Membership, FAQ) + CTA 'Join Trainee Track'. Must use glassmorphism (bg-deep_ink/80 backdrop-blur-xl). No fully transparent headers.",
+      "Problem/Cards: 3 irregular-shape energetic cards showing the problem of guessing.",
+      "Before/After: Shift comparison composition (layered offset frames).",
+      "Training Loop: 3-step loop (LEARN THE STANDARD / PRACTICE WITH PURPOSE / GET DIRECTION) with scroll reveals.",
+      "Founder Story: Adina's story with a portrait slot and a scrolling credibility ribbon (marquee).",
+      "Offer Section: 2 pricing cards. Primary: Trainee Track $20/mo. Secondary: Community Membership $5/mo.",
+      "Community Proof: 1,500+ dancers, collage format. CTA 'Meet the community inside Skool'. NO invented testimonials.",
+      "Audition-readiness: Editorial section with qualifier disclaimer.",
+      "FAQ Accordion: 8 questions.",
+      "Final CTA: Designed to feel like stepping onto a lit practice floor.",
+      "Footer: Disclaimer, contact email, Skool link."
+    ]
+  },
+  "motion": {
+    "scroll": "Use Lenis for smooth scrolling.",
+    "animations": "Choreography-like transitions: Cards should slide, pivot, and settle like counts of eight. Use framer-motion staggerChildren. Use beat dots and mirrored-frame effects.",
+    "accessibility": "CRITICAL: Respect prefers-reduced-motion. Wrap heavy animations in a useReducedMotion check."
+  },
+  "accessibility": {
+    "contrast": "Ensure text over neon backgrounds uses deep_ink text. White text on deep_ink background. Meet WCAG AA minimum.",
+    "testing": "All interactive elements MUST have a 'data-testid' attribute (e.g., data-testid='join-primary-cta')."
+  },
+  "media": {
+    "instructions": "CRITICAL: The brief states the user uploaded 3 real brand images (neon K-pop dancer photos with bold white type and lavender squiggles). You MUST prioritize using these images if they are found in the workspace (e.g., public/ folder). If missing, use the fallback URLs below.",
+    "image_urls": [
+      {
+        "url": "https://images.unsplash.com/photo-1784174135311-a2b614b0937d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwyfHxuZW9uJTIwZGFuY2UlMjBzdHVkaW8lMjBkYW5jZXJ8ZW58MHx8fHwxNzg2NjkyNjIyfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Hero Background / Fallback",
+        "description": "Woman in shimmering silver under neon lights"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1779401812210-b4142dee6e0d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzOTB8MHwxfHNlYXJjaHwxfHxuZW9uJTIwZGFuY2UlMjBzdHVkaW8lMjBkYW5jZXJ8ZW58MHx8fHwxNzg2NjkyNjIyfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Community/Gallery Fallback",
+        "description": "Two women pose with flowing fabric"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1770739723922-a4fd700bdb3b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODh8MHwxfHNlYXJjaHwyfHxoaXAlMjBob3AlMjBzdHJlZXQlMjBkYW5jZSUyMG5lb258ZW58MHx8fHwxNzg2NjkyNjIyfDA&ixlib=rb-4.1.0&q=85",
+        "category": "Problem/Shift Section Fallback",
+        "description": "Dancer gesturing in front of neon sign"
+      }
+    ]
+  },
+  "libraries": {
+    "required": [
+      "framer-motion",
+      "lucide-react",
+      "react-fast-marquee",
+      "@studio-freight/react-lenis",
+      "clsx",
+      "tailwind-merge"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "You have .js files, NOT .tsx files. Write React components in JSX format (.jsx or .js). Do not use TypeScript types.",
+    "Prioritize using the uploaded brand images in /public if available. Fallback to provided unsplash URLs only if missing.",
+    "Implement 'Sticker-like' badges using absolute positioning, slight rotations (e.g. rotate-6), and bright pastel backgrounds with dark text.",
+    "Ensure 'Trainee Mode' feels like a visual world: use grid/notebook-like background lines softly in CSS, combined with glowing elements (drop-shadow-[0_0_15px_rgba(211,149,255,0.5)])."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "DO NOT output generic 'AI slop' designs. We want bold, irregular, and memorable.",
+    "Never center-align the main app container (.App { text-align: center; } is banned).",
+    "Never use `transition: all`. Use specific transitions (e.g., transition: transform 0.2s, opacity 0.2s).",
+    "Always check contrast ratios.",
+    "No emojis for icons. Use lucide-react."
+  ]
+}
