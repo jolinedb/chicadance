@@ -1,6 +1,6 @@
-import { X, Check } from "lucide-react";
+import { X, Check, ArrowRight } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
-import { IMG } from "@/lib/constants";
+import { IMG, SKOOL_URL } from "@/lib/constants";
 
 const BEFORE = ["Random routines", "Guessing at technique", "Practicing alone with no plan", "Stuck at the same level"];
 const AFTER = ["Structured drills", "Clear technique focus", "Feedback and direction", "A training rhythm you can keep"];
@@ -23,6 +23,16 @@ export const Shift = () => (
             This is not a promise of an agency audition or a shortcut to debut. It is a real training
             environment for dancers who want to build their level with more clarity and intention.
           </p>
+          <a
+            href={SKOOL_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="shift-cta"
+            className="btn-primary font-display text-base px-8 py-4 rounded-full hard-shadow-electric inline-flex items-center gap-2 mt-8"
+          >
+            Start training in trainee mode
+            <ArrowRight className="w-5 h-5" />
+          </a>
         </Reveal>
         <Reveal delay={0.15} className="lg:col-span-2 relative hidden lg:block" data-testid="shift-pop-image">
           <div className="absolute -inset-2 bg-gradient-to-br from-[#38B6FF] to-[#AD4BAD] rounded-2xl rotate-3" />

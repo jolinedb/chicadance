@@ -6,7 +6,7 @@ import { SKOOL_URL, IMG } from "@/lib/constants";
 export const Community = () => {
   const reduced = useReducedMotion();
   return (
-  <section className="relative py-24 sm:py-32 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] overflow-hidden">
+  <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-16 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         <div>

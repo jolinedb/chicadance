@@ -10,7 +10,7 @@ const SEQUENCE = [
 ];
 
 export const Audition = () => (
-  <section className="relative py-24 sm:py-32">
+  <section className="relative pt-12 sm:pt-16 pb-24 sm:pb-32">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-10">
       <Reveal>
         <SectionLabel number="07">Practice to performance</SectionLabel>

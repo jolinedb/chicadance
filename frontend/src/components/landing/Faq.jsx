@@ -44,7 +44,7 @@ const FAQS = [
 ];
 
 export const Faq = () => (
-  <section id="faq" className="relative py-24 sm:py-32 scroll-mt-20">
+  <section id="faq" className="relative pt-24 sm:pt-32 pb-12 sm:pb-16 scroll-mt-20">
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10">
       <Reveal>
         <SectionLabel number="08">Questions, answered</SectionLabel>

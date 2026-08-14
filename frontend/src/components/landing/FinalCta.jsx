@@ -5,7 +5,7 @@ import { SKOOL_URL, IMG } from "@/lib/constants";
 export const FinalCta = () => {
   const reduced = useReducedMotion();
   return (
-    <section className="relative py-28 sm:py-40 overflow-hidden">
+    <section className="relative pt-14 sm:pt-20 pb-28 sm:pb-40 overflow-hidden">
       <div className="absolute inset-0">
         <img src={IMG.finalCtaTraining} alt="" aria-hidden="true" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[#06060F]/70" />

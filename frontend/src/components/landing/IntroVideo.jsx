@@ -10,7 +10,7 @@ const REASONS = [
 ];
 
 export const IntroVideo = () => (
-  <section className="relative py-24 sm:py-32" data-testid="intro-video-section">
+  <section className="relative pt-12 sm:pt-16 pb-12 sm:pb-16" data-testid="intro-video-section">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
         <Reveal x={-70} className="relative">
