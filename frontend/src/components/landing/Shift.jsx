@@ -1,5 +1,6 @@
 import { X, Check } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
+import { IMG } from "@/lib/constants";
 
 const BEFORE = ["Random routines", "Guessing at technique", "Practicing alone with no plan", "Stuck at the same level"];
 const AFTER = ["Structured drills", "Clear technique focus", "Feedback and direction", "A training rhythm you can keep"];
@@ -7,21 +8,32 @@ const AFTER = ["Structured drills", "Clear technique focus", "Feedback and direc
 export const Shift = () => (
   <section className="relative py-24 sm:py-32 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem]">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
-      <Reveal>
-        <SectionLabel number="02">The shift</SectionLabel>
-        <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight max-w-3xl display-skew">
-          The trainee standard, <span className="text-[#9CDAFF]">brought to your room.</span>
-        </h2>
-        <p className="text-base md:text-lg text-white/75 max-w-2xl mt-6">
-          CHICADANCE gives you a structured place to train like a serious dancer. Learn the drills,
-          habits, technique, and performance details that turn &ldquo;I love dancing&rdquo; into
-          visible progress.
-        </p>
-        <p className="text-sm md:text-base text-white/55 max-w-2xl mt-4">
-          This is not a promise of an agency audition or a shortcut to debut. It is a real training
-          environment for dancers who want to build their level with more clarity and intention.
-        </p>
-      </Reveal>
+      <div className="grid lg:grid-cols-5 gap-12 items-center">
+        <Reveal className="lg:col-span-3">
+          <SectionLabel number="02">The shift</SectionLabel>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight max-w-3xl display-skew">
+            The trainee standard, <span className="text-[#9CDAFF]">brought to your room.</span>
+          </h2>
+          <p className="text-base md:text-lg text-white/75 max-w-2xl mt-6">
+            CHICADANCE gives you a structured place to train like a serious dancer. Learn the drills,
+            habits, technique, and performance details that turn &ldquo;I love dancing&rdquo; into
+            visible progress.
+          </p>
+          <p className="text-sm md:text-base text-white/55 max-w-2xl mt-4">
+            This is not a promise of an agency audition or a shortcut to debut. It is a real training
+            environment for dancers who want to build their level with more clarity and intention.
+          </p>
+        </Reveal>
+        <Reveal delay={0.15} className="lg:col-span-2 relative hidden lg:block" data-testid="shift-pop-image">
+          <div className="absolute -inset-2 bg-gradient-to-br from-[#38B6FF] to-[#AD4BAD] rounded-2xl rotate-3" />
+          <div className="relative rounded-2xl overflow-hidden border-2 border-[#06060F] -rotate-2 hard-shadow-lav">
+            <img src={IMG.stageSet} alt="CHICADANCE dancer on a lit stage set" className="w-full h-72 object-cover object-top" />
+          </div>
+          <div className="absolute -bottom-4 left-6 bg-[#38B6FF] text-[#06060F] px-4 py-2 rounded-xl border-2 border-[#06060F] -rotate-3 hard-shadow-berry">
+            <span className="font-display text-xs display-skew">FROM PRACTICE TO STAGE</span>
+          </div>
+        </Reveal>
+      </div>
 
       <div className="grid md:grid-cols-2 gap-10 lg:gap-16 mt-16 items-start">
         <Reveal className="relative" data-testid="shift-before-card">

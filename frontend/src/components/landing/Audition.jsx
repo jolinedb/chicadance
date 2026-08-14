@@ -1,11 +1,12 @@
 import { Flame, Dumbbell, Music, Star } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
+import { IMG } from "@/lib/constants";
 
 const SEQUENCE = [
-  { icon: Flame, label: "Warm-up" },
-  { icon: Dumbbell, label: "Technical drill" },
-  { icon: Music, label: "Choreography practice" },
-  { icon: Star, label: "Performance energy" },
+  { icon: Flame, label: "Warm-up", img: IMG.studioFloor, pos: "object-[center_60%]" },
+  { icon: Dumbbell, label: "Technical drill", img: IMG.heroDancers, pos: "object-center" },
+  { icon: Music, label: "Choreography practice", img: IMG.greenScreen, pos: "object-center" },
+  { icon: Star, label: "Performance energy", img: IMG.stageSet, pos: "object-[center_30%]" },
 ];
 
 export const Audition = () => (
@@ -26,12 +27,24 @@ export const Audition = () => (
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-14">
         {SEQUENCE.map((step, i) => (
           <Reveal key={step.label} delay={i * 0.12} data-testid={`audition-step-${i + 1}`}>
-            <div className={`bg-[#0C0C1C] border border-white/15 rounded-2xl p-6 text-center ${i % 2 ? "rotate-1 lg:mt-8" : "-rotate-1"}`}>
-              <step.icon className="w-7 h-7 text-[#9CDAFF] mx-auto mb-3" />
-              <span className="font-display text-xs text-white/40 display-skew block mb-1">
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <p className="font-bold text-sm sm:text-base">{step.label}</p>
+            <div
+              className={`relative overflow-hidden bg-[#0C0C1C] border border-white/15 rounded-2xl p-6 pt-24 sm:pt-32 text-center ${
+                i % 2 ? "rotate-1 lg:mt-8" : "-rotate-1"
+              }`}
+            >
+              <img
+                src={step.img}
+                alt={`${step.label} at CHICADANCE`}
+                className={`absolute inset-0 w-full h-full object-cover opacity-30 ${step.pos}`}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#06060F] via-[#06060F]/45 to-transparent" />
+              <div className="relative">
+                <step.icon className="w-7 h-7 text-[#9CDAFF] mx-auto mb-3" />
+                <span className="font-display text-xs text-white/50 display-skew block mb-1">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <p className="font-bold text-sm sm:text-base">{step.label}</p>
+              </div>
             </div>
           </Reveal>
         ))}

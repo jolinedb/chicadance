@@ -26,9 +26,9 @@ Build a bold, colorful, fun, scrollable landing/offer page driving to the founde
 - Editorial marquee (x2), Problem (3 tilted cards), Before/After Shift, 3-step Training Loop, Founder story + credibility ribbon + disclaimer footnote, Offer cards, Community proof (1,500+, image collage), Audition readiness + qualifier, FAQ accordion (8 Q&A), Final CTA, Footer with legal disclaimer + adinadebez@gmail.com.
 - SEO: title, meta description, OG/Twitter cards.
 - Verified: fonts loaded, CTAs correct, mobile menu, FAQ accordion, no horizontal overflow (390px + 1920px).
+- Update (June 2026): Real founder photo of Adina in founder section; 4 uploaded dancer photos as transparent backgrounds behind each audition step (warm-up=studio floor, technical drill=hero dancers, choreography=green screen shoot, performance=stage set); tilted "FROM PRACTICE TO STAGE" pop image in the Shift section. Image URLs in `src/lib/constants.js`.
 
 ## Pending / Backlog
-- P0: Swap founder portrait placeholder (`Founder.jsx`, data-testid="founder-portrait-slot") when Adina's photo is uploaded.
 - P1: Replace hero image with real muted training video loop (with pause control) when footage is supplied.
 - P1: Real testimonials section when approved quotes are supplied.
 - P2: Email lead-capture module (skipped by user choice — requires email service).
