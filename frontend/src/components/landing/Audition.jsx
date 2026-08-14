@@ -56,6 +56,26 @@ export const Audition = () => (
           you a more structured place to train toward your goals.
         </p>
       </Reveal>
+
+      <Reveal delay={0.15} className="mt-24 text-center" data-testid="global-community">
+        <h3 className="font-display text-3xl sm:text-4xl lg:text-5xl uppercase leading-tight display-skew max-w-3xl mx-auto">
+          Join dancers from <span className="text-[#38B6FF]">all over the world</span>
+        </h3>
+        <p className="text-base md:text-lg text-white/75 max-w-2xl mx-auto mt-6">
+          Our global community's here to give feedback, share tips, and take on dance challenges
+          with you.
+        </p>
+        {IMG.worldMap && (
+          <div className="relative mt-12 rounded-2xl overflow-hidden border-2 border-[#38B6FF]/40 hard-shadow-berry">
+            <img
+              src={IMG.worldMap}
+              alt="Map of CHICADANCE dancers around the world"
+              className="w-full h-auto"
+              data-testid="global-community-map"
+            />
+          </div>
+        )}
+      </Reveal>
     </div>
   </section>
 );
