@@ -9,6 +9,7 @@ import { TrainingLoop } from "@/components/landing/TrainingLoop";
 import { Founder } from "@/components/landing/Founder";
 import { Offer } from "@/components/landing/Offer";
 import { Community } from "@/components/landing/Community";
+import { IntroVideo } from "@/components/landing/IntroVideo";
 import { Audition } from "@/components/landing/Audition";
 import { Faq } from "@/components/landing/Faq";
 import { FinalCta } from "@/components/landing/FinalCta";
@@ -43,6 +44,7 @@ export default function Landing() {
         <Founder />
         <Offer />
         <Community />
+        <IntroVideo />
         <Audition />
         <Marquee fast className="rotate-1" />
         <Faq />

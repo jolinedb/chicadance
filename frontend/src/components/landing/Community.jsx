@@ -1,8 +1,11 @@
-import { ArrowRight, Play } from "lucide-react";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
-import { SKOOL_URL, IMG, INTRO_VIDEO_URL } from "@/lib/constants";
+import { SKOOL_URL, IMG } from "@/lib/constants";
 
-export const Community = () => (
+export const Community = () => {
+  const reduced = useReducedMotion();
+  return (
   <section className="relative py-24 sm:py-32 bg-[#0C0C1C] rounded-t-[3rem] rounded-b-[3rem] overflow-hidden">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
       <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -32,40 +35,40 @@ export const Community = () => (
               Meet the CHICADANCE Community
               <ArrowRight className="w-5 h-5" />
             </a>
-            <div className="mt-8" data-testid="community-intro-video-block">
-              <p className="flex items-center gap-2 text-xs tracking-[0.25em] font-bold uppercase text-[#9CDAFF] mb-3">
-                <Play className="w-4 h-4" fill="#9CDAFF" />
-                Video intro to the course &amp; community
-              </p>
-              <div className="rounded-2xl overflow-hidden border-2 border-[#38B6FF] hard-shadow-electric -rotate-1 bg-black">
-                <video
-                  data-testid="community-intro-video"
-                  src={INTRO_VIDEO_URL}
-                  poster="/intro-video-poster.jpg"
-                  controls
-                  playsInline
-                  preload="metadata"
-                  className="w-full aspect-video"
-                >
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-            </div>
           </Reveal>
         </div>
 
-        <Reveal delay={0.15} className="relative h-[420px] sm:h-[500px]" data-testid="community-collage">
-          <div className="absolute top-0 left-0 w-[70%] rotate-[-4deg] rounded-2xl overflow-hidden border-2 border-[#D395FF] hard-shadow-electric">
+        <div className="relative h-[420px] sm:h-[500px]" data-testid="community-collage">
+          <motion.div
+            initial={reduced ? { opacity: 1 } : { opacity: 0, x: -120, rotate: -4 }}
+            whileInView={{ opacity: 1, x: 0, rotate: -4 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute top-0 left-0 w-[70%] rounded-2xl overflow-hidden border-2 border-[#D395FF] hard-shadow-electric"
+          >
             <img src={IMG.studioFloor} alt="CHICADANCE dancer training in a Seoul practice studio" className="w-full h-full object-cover" />
-          </div>
-          <div className="absolute bottom-0 right-0 w-[70%] rotate-[3deg] rounded-2xl overflow-hidden border-2 border-[#38B6FF] hard-shadow-berry">
+          </motion.div>
+          <motion.div
+            initial={reduced ? { opacity: 1 } : { opacity: 0, x: 120, rotate: 3 }}
+            whileInView={{ opacity: 1, x: 0, rotate: 3 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute bottom-0 right-0 w-[70%] rounded-2xl overflow-hidden border-2 border-[#38B6FF] hard-shadow-berry"
+          >
             <img src={IMG.greenScreen} alt="CHICADANCE dancer filming choreography content" className="w-full h-full object-cover" />
-          </div>
-          <div className="absolute top-[42%] left-[38%] bg-[#D395FF] text-[#06060F] px-4 py-2 rounded-xl border-2 border-[#06060F] rotate-[-6deg] hard-shadow-sky">
+          </motion.div>
+          <motion.div
+            initial={reduced ? { opacity: 1 } : { opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.5, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute top-[42%] left-[38%] bg-[#D395FF] text-[#06060F] px-4 py-2 rounded-xl border-2 border-[#06060F] rotate-[-6deg] hard-shadow-sky"
+          >
             <span className="font-display text-xs sm:text-sm display-skew">INSIDE SKOOL</span>
-          </div>
-        </Reveal>
+          </motion.div>
+        </div>
       </div>
     </div>
   </section>
-);
+  );
+};

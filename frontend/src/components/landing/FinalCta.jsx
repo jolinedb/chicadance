@@ -7,9 +7,9 @@ export const FinalCta = () => {
   return (
     <section className="relative py-28 sm:py-40 overflow-hidden">
       <div className="absolute inset-0">
-        <img src={IMG.chicaDance} alt="" aria-hidden="true" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-[#06060F]/80" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#06060F_75%)]" />
+        <img src={IMG.finalCtaTraining} alt="" aria-hidden="true" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-[#06060F]/70" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,#06060F_78%)]" />
       </div>
 
       <motion.div

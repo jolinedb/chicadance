@@ -1,6 +1,6 @@
-import { Flame, Dumbbell, Music, Star } from "lucide-react";
+import { Flame, Dumbbell, Music, Star, ArrowRight } from "lucide-react";
 import { Reveal, SectionLabel } from "./Reveal";
-import { IMG } from "@/lib/constants";
+import { IMG, SKOOL_URL } from "@/lib/constants";
 
 const SEQUENCE = [
   { icon: Flame, label: "Warm-up", img: IMG.stepWarmup, pos: "object-center" },
@@ -35,9 +35,9 @@ export const Audition = () => (
               <img
                 src={step.img}
                 alt={`${step.label} at CHICADANCE`}
-                className={`absolute inset-0 w-full h-full object-cover opacity-30 ${step.pos}`}
+                className={`absolute inset-0 w-full h-full object-cover opacity-60 ${step.pos}`}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#06060F] via-[#06060F]/45 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#06060F] via-[#06060F]/55 to-[#06060F]/10" />
               <div className="relative">
                 <step.icon className="w-7 h-7 text-[#9CDAFF] mx-auto mb-3" />
                 <span className="font-display text-xs text-white/50 display-skew block mb-1">
@@ -86,6 +86,16 @@ export const Audition = () => (
             </div>
           </div>
         )}
+        <a
+          href={SKOOL_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-testid="audition-cta"
+          className="btn-primary font-display text-base px-8 py-4 rounded-full hard-shadow-electric inline-flex items-center gap-2 mt-12"
+        >
+          Join dancers worldwide
+          <ArrowRight className="w-5 h-5" />
+        </a>
       </Reveal>
     </div>
   </section>

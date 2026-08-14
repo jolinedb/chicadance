@@ -24,6 +24,8 @@ export const IMG = {
   stepPerformance:
     "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/32b75c43dcaa6cf93a96a2ef4e9aeaafc29a2c43ed3955fc1d8a875706ea6e9c.jpeg",
   worldMap: "https://customer-assets-jt897jd0.emergentagent.net/job_playful-skool-entry/artifacts/d0op09y9_image.png",
+  finalCtaTraining:
+    "https://static.prod-images.emergentagent.com/jobs/65c41d42-bbec-47c5-9539-54df8500ce69/images/f613b6043d55e46076832103d1ae8705cf2e5f1dac86d17b8eb09ff24a61971d.jpeg",
 };
 
 export const INSTAGRAM_URL = "https://www.instagram.com/adina.joline/?hl=en";
