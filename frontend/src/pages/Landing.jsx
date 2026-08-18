@@ -12,6 +12,7 @@ import { Community } from "@/components/landing/Community";
 import { IntroVideo } from "@/components/landing/IntroVideo";
 import { Audition } from "@/components/landing/Audition";
 import { Faq } from "@/components/landing/Faq";
+import { Testimonials } from "@/components/landing/Testimonials";
 import { FinalCta } from "@/components/landing/FinalCta";
 import { Footer } from "@/components/landing/Footer";
 
@@ -48,6 +49,7 @@ export default function Landing() {
         <Audition />
         <Marquee fast className="rotate-1" />
         <Faq />
+        <Testimonials />
         <FinalCta />
       </main>
       <Footer />
